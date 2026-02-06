@@ -1,0 +1,49 @@
+<style>
+    /* Sets the background to pure black and centers the board */
+    body { 
+        background-color: #000; 
+        margin: 0; 
+        overflow: hidden; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        color: #F5F1ED; 
+    }
+
+    /* Defines the fixed 1920x1080 resolution and the premium gradient */
+    #app-container {
+        width: 1920px; 
+        height: 1080px;
+        background: linear-gradient(135deg, #1a1412 0%, #0f0a09 100%);
+        position: relative;
+        transform-origin: center;
+        /* This line ensures the menu scales perfectly to any TV size */
+        transform: scale(min(1, min(100vw / 1920, 100vh / 1080)));
+    }
+
+    /* Style for the 'Random Highlight' effect on menu items */
+    .active-feature {
+        background: rgba(47, 82, 51, 0.3);
+        transform: scale(1.05);
+        border-radius: 12px;
+        padding-left: 15px;
+    }
+
+    /* Styles for the Admin Edit Mode inputs */
+    .edit-input { 
+        background: #2C221F; 
+        border: 2px solid #D4AF37; 
+        color: white; 
+        border-radius: 8px; 
+        text-align: inherit; 
+        width: 100%; 
+    }
+
+    /* Smooth transition for the highlighting effect */
+    .item-row { 
+        transition: all 0.4s ease; 
+        padding: 10px 0; 
+        border-bottom: 1px solid rgba(255,255,255,0.05); 
+    }
+</style>
